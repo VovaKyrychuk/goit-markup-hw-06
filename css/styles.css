@@ -19,6 +19,8 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+p,
 h1,
 h2,
 h3,
@@ -691,20 +693,17 @@ address {
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
-
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .footer-soc-icon {
   fill: var(--section-backgraund-color);
 }
+
 .form-footer {
   display: flex;
-}
-.footer-subscription {
-  /*margin-left: 120px;*/
+  align-items: center;
 }
 .footer-subscription-title {
   margin-bottom: 20px;
@@ -727,20 +726,17 @@ address {
   line-height: 1.25;
   align-items: center;
   letter-spacing: 0.03em;
-
   color: rgba(255, 255, 255, 0.6);
 }
-
 .footer-input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   align-items: center;
   letter-spacing: 0.03em;
-
   color: rgba(255, 255, 255, 0.6);
 }
 .footer-btn {
-  position: absolute;
+  position: relative;
   margin-left: 12px;
   min-width: 200px;
   height: 50px;
@@ -758,15 +754,11 @@ address {
   letter-spacing: 0.06em;
   padding: 10px 62px 10px 28px;
 }
-
 .footer-btn:hover,
 .footer-btn:focus {
   background-color: var(--btn-hover-bgcolor);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-}
-.footer-button-box {
-  position: relative;
 }
 .icon-submit {
   position: absolute;
@@ -776,6 +768,7 @@ address {
   right: 28px;
 }
 
+/*---modal window---*/
 .backdrop {
   width: 100%;
   height: 100%;
@@ -854,7 +847,6 @@ address {
 .modal-input-textarea {
   resize: none;
   margin-top: 4px;
-  margin-bottom: 20px;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -865,6 +857,7 @@ address {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
 }
 .modal-input-textarea::placeholder {
   font-size: 12px;
@@ -872,19 +865,17 @@ address {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .modal-input:focus,
 .modal-input-textarea:focus {
   border-color: var(--accent-color);
 }
-
 .input-title {
+  display: block;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: #757575;
+  color: var(--primary-text-color);
 }
-
 .input-text {
   position: relative;
 }
@@ -900,37 +891,45 @@ address {
 .modal-input:focus + .modal-icon {
   fill: var(--accent-color);
 }
-
-/*.modal-policy-text*/
-.lable-check {
+/*---checkbox---*/
+.chekbox {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.chekbox-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #757575;
-  display: flex;
-  align-items: center;
+  color: var(--primary-text-color);
 }
-.policy-check {
+.chekbox-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.chekbox-icon {
+  display: inline-block;
   width: 16px;
   height: 15px;
-  border: 2px solid var(--caption-text-color);
+  border: 1px solid var(--primary-text-color);
   border-radius: 2px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 3px;
+  margin-right: 8.3px;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.input-check:checked + .policy-check {
-  background-color: #2196f3;
-  border-color: transparent;
+.chekbox-input:checked + .chekbox-icon {
+  background-color: var(--accent-color);
   fill: var(--section-backgraund-color);
-}
-.policy-box {
-  margin-bottom: 30px;
+  border: none;
 }
 .policy-link {
   color: var(--accent-color);
 }
+/*---chekbox button---*/
 .form-btn {
   display: flex;
   justify-content: center;

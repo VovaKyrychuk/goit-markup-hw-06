@@ -500,7 +500,7 @@
           </address>
         </div>
         <div class="footcont-soc">
-          <h2 class="footer-soc-title">приєднуйтесь</h2>
+          <p class="footer-soc-title">приєднуйтесь</p>
           <ul class="footer-soc-list list">
             <li class="footer-soc-item">
               <a
@@ -553,26 +553,22 @@
           </ul>
         </div>
         <div class="footer-subscription">
-          <h2 class="footer-subscription-title">Підпишіться на розсилку</h2>
+          <p class="footer-subscription-title">Підпишіться на розсилку</p>
           <form class="form-footer">
-            <div class="footer-mail-box">
-              <label>
-                <input
-                  class="footer-input"
-                  type="email"
-                  name="user-footer-mail"
-                  placeholder="E-mail"
-                />
-              </label>
-            </div>
-            <div class="footer-button-box">
-              <button class="footer-btn" type="submit" name="submit-btn">
-                Підписатися
-                <svg class="icon-submit" width="24px" height="24px">
-                  <use href="./images/icons.svg#icon-icon-send"></use>
-                </svg>
-              </button>
-            </div>
+            <label>
+              <input
+                class="footer-input"
+                type="email"
+                name="user-footer-mail"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="footer-btn" type="submit" name="submit-btn">
+              Підписатися
+              <svg class="icon-submit" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon-send"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
@@ -642,22 +638,14 @@
               class="modal-input-textarea"
             ></textarea>
           </label>
-          <div class="policy-box">
-            <label class="label-check">
-              <input
-                type="checkbox"
-                name="policy"
-                class="input-check visually-hidden"
-              />
-              <span class="policy-check">
-                <svg class="icon-chek" width="16" height="15">
-                  <use href="./images/icons.svg#icon-check"></use>
-                </svg>
-              </span>
-              <span class="modal-policy-text"
-                >Погоджуюся з розсилкою та приймаю
-                <a class="policy-link" href="#">Умови договору</a></span
-              >
+          <div class="chekbox">
+            <label class="chekbox-label">
+              <input class="chekbox-input" type="checkbox" name="policy" />
+              <svg class="chekbox-icon" width="16" height="15">
+                <use href="./images/icons.svg#icon-check"></use>
+              </svg>
+              Погоджуюся з розсилкою та приймаю &nbsp;
+              <a class="policy-link" href="">Умови договору</a>
             </label>
           </div>
           <button type="submit" class="form-btn btn">Відправити</button>
